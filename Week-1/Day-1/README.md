@@ -1,4 +1,4 @@
-# Employee SQL Practice Queries
+# SQL Practice Queries
 
 ## 📌 What I Practiced
 
