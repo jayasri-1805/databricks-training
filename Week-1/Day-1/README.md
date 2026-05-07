@@ -16,8 +16,6 @@ The practice mainly focused on:
 * Nested and correlated subqueries
 * Solving intermediate SQL problems
 
----
-
 # 📚 Topics Covered
 
 ## SQL Basics
@@ -27,19 +25,11 @@ The practice mainly focused on:
 * ORDER BY
 * DISTINCT
 * LIMIT
-* BETWEEN
-* IN
-* NULL values
-
----
 
 ## String Matching
 
 * LIKE operator
 * Wildcards
-* Pattern searching
-
----
 
 ## Date Functions
 
@@ -47,8 +37,6 @@ The practice mainly focused on:
 * MONTH()
 * DATE_SUB()
 * Date filtering
-
----
 
 ## Aggregate Functions
 
@@ -58,23 +46,16 @@ The practice mainly focused on:
 * MIN()
 * SUM()
 
----
-
 ## GROUP BY and HAVING
 
 * Department-wise calculations
 * Salary analysis
 * Group filtering
 
----
-
 ## Joins
 
 * INNER JOIN
 * LEFT JOIN
-* Multi-table joins
-
----
 
 ## Subqueries
 
@@ -82,8 +63,6 @@ The practice mainly focused on:
 * Correlated subqueries
 * Salary comparison queries
 * Department analysis queries
-
----
 
 # 🛠 Practice Files
 
@@ -93,8 +72,16 @@ The practice mainly focused on:
 | datacreation.sql     | Database schema and sample records |
 | README.md            | Project documentation              |
 
+# 📂 Folder Structure
+Day-1/
+│
+├── README.md
+├── datacreation.sql
+├── queries.sql
+└── outputs/
 
+# 🔥 Platforms Used
+DB Fiddle
 
 # ✅ Status
-
 Completed SQL practice queries and uploaded all files to GitHub.
