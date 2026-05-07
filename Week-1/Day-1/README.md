@@ -64,7 +64,7 @@ The practice mainly focused on:
 * Salary comparison queries
 * Department analysis queries
 
-# 🛠 Practice Files
+## 🛠 Practice Files
 
 | File Name            | Description                        |
 | -------------------- | ---------------------------------- |
@@ -72,7 +72,7 @@ The practice mainly focused on:
 | datacreation.sql     | Database schema and sample records |
 | README.md            | Project documentation              |
 
-# 📂 Folder Structure
+## 📂 Folder Structure
 Day-1/
 │
 ├── README.md
@@ -80,8 +80,8 @@ Day-1/
 ├── queries.sql
 └── outputs/
 
-# 🔥 Platforms Used
+## 🔥 Platforms Used
 DB Fiddle
 
-# ✅ Status
+### ✅ Status
 Completed SQL practice queries and uploaded all files to GitHub.
