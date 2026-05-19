@@ -444,3 +444,53 @@ ranked_employees AS (
 SELECT *
 FROM ranked_employees
 WHERE dept_rank = 1;
+
+-- BONUS CHALLENGE
+-- Create a report showing monthly sales trends using:
+-- CTEs
+-- Running totals
+-- LAG()
+-- Percentage growth calculation
+
+WITH monthly_sales AS (
+    SELECT 
+        DATE_TRUNC('month', order_date) AS sales_month,
+        SUM(total_amount) AS monthly_sales
+    FROM orders
+    GROUP BY DATE_TRUNC('month', order_date)
+),
+
+sales_trends AS (
+    SELECT 
+        sales_month,
+        monthly_sales,
+
+        -- Running Total
+        SUM(monthly_sales) OVER(
+            ORDER BY sales_month
+        ) AS running_total,
+
+        -- Previous Month Sales
+        LAG(monthly_sales) OVER(
+            ORDER BY sales_month
+        ) AS previous_month_sales
+
+    FROM monthly_sales
+)
+
+SELECT 
+    sales_month,
+    monthly_sales,
+    running_total,
+    previous_month_sales,
+
+    -- Percentage Growth
+    ROUND(
+        (
+            (monthly_sales - previous_month_sales)
+            * 100.0
+        ) / previous_month_sales,
+        2
+    ) AS percentage_growth
+
+FROM sales_trends;
