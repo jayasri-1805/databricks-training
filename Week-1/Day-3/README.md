@@ -68,8 +68,8 @@ The practice mainly focused on:
 
 | File Name         | Description                                  |
 | ----------------- | -------------------------------------------- |
-| window_cte.sql    | All Window Function and CTE queries          |
-| datacreation.sql  | Database schema and sample records           |
+| Window Functions and CTE.sql    | All Window Function and CTE queries          |
+| Queries.sql  | Database schema and sample records           |
 | README.md         | Project documentation                        |
 
 ## 📂 Folder Structure
@@ -77,8 +77,8 @@ The practice mainly focused on:
 Day-3/
 │
 ├── README.md
-├── datacreation.sql
-├── window_cte.sql
+├── Queries.sql
+├── Window Functions and CTE.sql 
 └── outputs/
 
 ## 🔥 Platforms Used
