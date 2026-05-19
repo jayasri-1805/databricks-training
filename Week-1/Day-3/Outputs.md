@@ -400,7 +400,7 @@
 | Bob Smith     | Sales      | 65000.00 | 5000.00    |
 
 ---
-**Query #31**
+**Bonus Challenge**
 
 | employee_id | employee_name | department | total_sales | dept_rank |
 | ----------- | ------------- | ---------- | ----------- | --------- |
