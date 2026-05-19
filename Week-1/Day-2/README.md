@@ -1,185 +1,89 @@
-# SQL Joins Assignment – Day 2
+# SQL Joins Assignment
 
-## 📌 Overview
-This project demonstrates the use of different SQL JOIN operations using PostgreSQL.  
-The assignment focuses on understanding how relational tables interact using:
+## 📌 What I Practiced
 
-- INNER JOIN
-- LEFT JOIN
-- RIGHT JOIN
-- FULL OUTER JOIN
-- CROSS JOIN
+This repository contains SQL JOIN practice queries based on a Student-Course-Instructor database schema as part of my DBMS and SQL learning journey.
 
-The database simulates a simple academic management system containing:
+The practice mainly focused on:
 
-- Students
-- Courses
-- Instructors
-- Enrollments
+* Understanding different SQL JOIN operations
+* Retrieving related data from multiple tables
+* Handling NULL and unmatched records
+* Working with relational database structures
+* Combining data using FULL OUTER JOIN
+* Generating reports using multi-table joins
+* Creating all possible combinations using CROSS JOIN
 
----
+# 📚 Topics Covered
 
-# 📂 Database Schema
+## SQL JOIN Operations
 
-## Tables Used
+* INNER JOIN
+* LEFT JOIN
+* RIGHT JOIN
+* FULL OUTER JOIN
+* CROSS JOIN
 
-### 1. instructors
-Stores instructor details.
+## Filtering and NULL Handling
 
-| Column | Type |
-|--------|------|
-| instructor_id | INT |
-| instructor_name | VARCHAR |
-| department | VARCHAR |
+* IS NULL
+* Unmatched row filtering
+* Relationship validation
 
----
+## Multi-Table Queries
 
-### 2. students
-Stores student information.
+* Student-Course relationships
+* Instructor-Course relationships
+* Enrollment analysis
+* Combined reporting queries
 
-| Column | Type |
-|--------|------|
-| student_id | INT |
-| student_name | VARCHAR |
-| email | VARCHAR |
+## PostgreSQL Concepts
 
----
+* Foreign Keys
+* Relational schema design
+* Table relationships
 
-### 3. courses
-Stores course details.
+## 🛠 Practice Files
 
-| Column | Type |
-|--------|------|
-| course_id | INT |
-| course_name | VARCHAR |
-| instructor_id | INT |
+| File Name        | Description                               |
+| ---------------- | ----------------------------------------- |
+| queries.sql        | All SQL JOIN assignment queries           |
+| datacreation.sql | Database schema and sample records        |
+| README.md        | Project documentation                     |
 
----
+## 📂 Folder Structure
 
-### 4. enrollments
-Stores enrollment records.
+Day-2/
+│
+├── README.md
+├── datacreation.sql
+├── queries.sql
+└── outputs.md
 
-| Column | Type |
-|--------|------|
-| enrollment_id | INT |
-| student_id | INT |
-| course_id | INT |
-| enrollment_date | DATE |
+## 🔥 Platforms Used
 
----
+* PostgreSQL
+* DB Fiddle
 
-# 🚀 Topics Covered
-
-- LEFT JOIN
-- RIGHT JOIN
-- FULL OUTER JOIN
-- CROSS JOIN
-- Handling NULL values
-- Multi-table joins
-- Relationship mapping
-- Query filtering
-
----
-
-# 📝 Tasks Performed
-
-## 1. Display all students and the courses they are enrolled in
-Used `LEFT JOIN` to include students without enrollments.
-
----
-
-## 2. Find all courses with no students enrolled
-Used `LEFT JOIN` with `NULL` filtering.
-
----
-
-## 3. Display all instructors and the courses they teach
-Included instructors without assigned courses.
-
----
-
-## 4. Find courses without instructors
-Filtered rows where `instructor_id IS NULL`.
-
----
-
-## 5. Display students and enrollment information using RIGHT JOIN
-Retrieved all enrollment records even if student data is missing.
-
----
-
-## 6. Find students not enrolled in any course
-Used `LEFT JOIN` and `NULL` conditions.
-
----
-
-## 7. FULL OUTER JOIN on students and enrollments
-Displayed matched and unmatched rows from both tables.
-
----
-
-## 8. Find courses never enrolled by students
-Identified unused courses.
-
----
-
-## 9. FULL OUTER JOIN on instructors and courses
-Displayed assigned and unassigned relationships.
-
----
-
-## 10. Generate combined report
-Displayed:
-
-- Student Name
-- Course Name
-- Instructor Name
-
-Even when some data was unavailable.
-
----
-
-## ⭐ Bonus Challenge
-Used `CROSS JOIN` to display every possible student-course combination.
-
----
-
-# 💻 Sample Query
-
-```sql
-SELECT s.student_name, c.course_name
-FROM students s
-LEFT JOIN enrollments e
-ON s.student_id = e.student_id
-LEFT JOIN courses c
-ON e.course_id = c.course_id;
-```
-
----
 
 # 📊 Key Learning Outcomes
 
 After completing this assignment, I learned:
 
-- How JOINs combine related tables
-- Difference between LEFT, RIGHT, and FULL OUTER JOIN
-- Handling unmatched records
-- Using CROSS JOIN for combinations
-- Writing multi-table SQL queries
-- Working with relational database structures
+* How different JOIN operations work
+* Difference between LEFT, RIGHT, and FULL OUTER JOIN
+* Handling unmatched rows in relational databases
+* Writing complex multi-table SQL queries
+* Understanding relationships between tables
+* Using CROSS JOIN for generating combinations
 
----
+# 🛠 Technologies Used
 
-# 🛠️ Technologies Used
-
-- PostgreSQL
-- SQL
-- DB Fiddle / pgAdmin
-
----
+* PostgreSQL
+* SQL
+* DB Fiddle
 
 # 📌 Conclusion
 
-This assignment strengthened my understanding of SQL JOIN operations and relational database concepts.  
-It provided hands-on experience in combining multiple tables and retrieving meaningful insights from connected datasets.
-
+This assignment improved my understanding of SQL JOINs and relational database concepts.  
+It provided hands-on experience in combining multiple tables and retrieving meaningful information from connected datasets.
