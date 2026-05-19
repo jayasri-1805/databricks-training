@@ -25,15 +25,10 @@ FROM courses
 WHERE instructor_id IS NULL;
 
 -- 5. Display all students and enrollment information using a RIGHT JOIN.
-SELECT s.student_name,
-       e.enrollment_id,
-       e.course_id,
-       e.enrollment_date
+SELECT s.student_name,e.enrollment_id,e.course_id,e.enrollment_date
 FROM students s
 RIGHT JOIN enrollments e
 ON s.student_id = e.student_id;
-
-
 
 -- 6. Find students who are not enrolled in any course.
 SELECT s.student_name
@@ -42,13 +37,8 @@ LEFT JOIN enrollments e
 ON s.student_id = e.student_id
 WHERE e.student_id IS NULL;
 
-
-
 -- 7. Use a FULL OUTER JOIN to display all students and enrollments, including unmatched rows from both tables.
-SELECT s.student_name,
-       e.enrollment_id,
-       e.course_id,
-       e.enrollment_date
+SELECT s.student_name,e.enrollment_id,e.course_id,e.enrollment_date
 FROM students s
 FULL OUTER JOIN enrollments e
 ON s.student_id = e.student_id;
@@ -61,16 +51,13 @@ ON c.course_id = e.course_id
 WHERE e.course_id IS NULL;
 
 -- 9. Display all instructors and courses using a FULL OUTER JOIN and identify unmatched rows.
-SELECT i.instructor_name,
-       c.course_name
+SELECT i.instructor_name, c.course_name
 FROM instructors i
 FULL OUTER JOIN courses c
 ON i.instructor_id = c.instructor_id;
 
 -- 10. Create a report showing: student name, course name, and instructor name.Include rows even if course or instructor information is missing.
-SELECT s.student_name,
-       c.course_name,
-       i.instructor_name
+SELECT s.student_name,c.course_name,i.instructor_name
 FROM students s
 FULL OUTER JOIN enrollments e
 ON s.student_id = e.student_id
@@ -81,7 +68,6 @@ ON c.instructor_id = i.instructor_id;
 
 -- BONUS CHALLENGE
 -- List every student and every course,even if there is no enrollment relationship between them.
-SELECT s.student_name,
-       c.course_name
+SELECT s.student_name,c.course_name
 FROM students s
 CROSS JOIN courses c;
